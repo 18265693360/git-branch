@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+<script>
+
+    /*
+    * 同事做了不好的修改
+    * 自己写的正确
+    * git add.
+    * git commit -m ""
+    * git push 肯定报错
+    *
+    * 之前 先拉取 git pull 在提交
+    *
+    * 现在强制提交 git push -f
+    * 强制修改服务器
+    * 之前同事的版本都没有了
+    * */
+
+    /*
+    *提交了修改
+    * 发现没有 git pull
+    * git pull 失败
+    * git reset --hard origin/master 回到拉取之前
+    * */
+
+    /*
+    * 线上线下的冲突
+    * git pull （拉取服务端的更新） 更新代码 每天上班的第一件事
+    * 也是一样 判断正确的代码 删除不需要的
+    * git add .
+    * git commit -m "选择了正确的修改"
+    * git push 提交
+    * */
+
+    /*
+    * 如何解决分支冲突 就是两个人同时在同一个模块进行修改
+    * 判断要哪个代码 删除没要的 注释
+    * 然后 git add .
+    * git commit -m "完成合并 解决冲=冲突"
+    * git branch -d + 分支名 删除分支
+    * */
+
+    /*
+    * 分支主要是后端用来加功能
+    * 新建分支 git branch + 分支名
+    * git branch 查看分支
+    * *branch 就代表新的分支
+    *
+    * 切换分支 git checkout + 分支名
+    *
+    * 提交分支
+    * git checkout user-development
+    * git branch
+    * * user-development
+    * 提交版本库
+    * git add .
+    * git commit -m ""
+    * git status
+    * git checkout master //切换到主分支
+    * 重新进入开发分支
+    * git checkout user-development
+    *
+    * 功能测试完成 可以合并分支
+    *  git merge user-development //此时在主分支
+    * 合并完成删除分支
+    * git branch -d user-development
+    * git branch 就剩下一个分支
+    *
+    * 在公司不要直接向主分支推东西
+    *
+    * */
+
+    /*
+    * 查看版本 git log
+    *
+    * git reset --hard^/commit_id
+    *
+    * 将暂存区文件移除
+    * git reset HEAD file
+    *
+    * git checkout -- <将操作回滚> 工作区的修改放弃
+    *
+    * commit_id 用来标识版本
+    *
+    * 我们可以回退到任何一个版本。
+    *
+    * git reset commit_id
+    *
+    * 工作区就是 我们的项目目录及文件 常规开发的内容
+    *
+    * 版本库 .git目录 就是git工具用于管理版本的目录 不能动
+    *
+    *第一步，将文件从工作区添加到 版本库中的暂存区。
+    * 第二步，将暂存区中的所有内容一次性提交到版本库的当前分支。
+    *
+    *基本命令
+    *
+    *git add 将文件添加到暂存区
+    * 使用git commit 将暂存区中的所有内容 提交到master 分支
+    *
+    * git config git 的配置
+    *
+    * git add 添加到暂存区 可以添加多个 中间用多个空格隔开
+    *
+    *
+    * git commit 将文件从暂存去添加到分支
+    *
+    * git status 查看版本库状态
+    *
+    * git reset 重置 回退到指定的版本
+    *
+    * 回退到版本 使用 commit_id 来指定 HEAD^ HEAD^^ HEAD^^^ HEAD~n
+    *
+    * 使用的会退方式  ---hard  --soft 一个硬回退 一个软回退
+    * git reset --hard + commit_id
+    *
+    * 如何获取所有版本的commit_id呢？
+针对这个需求，需要分两种情况：
+	第一，git bash窗口没有关闭，使用前面查过的commit_id
+	第二，git bash窗口关闭。比如，昨天做的操作，今天后悔了。 使用 git reflog
+    git log 只能查看当前版本之前的所有版本。
+    *
+    * */
+</script>
+</html>
